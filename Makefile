@@ -46,6 +46,5 @@ cv:
 # makes a CV file called "Jakub Olizarowicz CV.txt", yep, with spacebars
 
 
-
 cover: 
 # makes Cover Letter file called "Jakub_Olizarowicz_CL.txt" no spaces
