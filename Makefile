@@ -1,5 +1,5 @@
 
-Info="Hi,                                                    \
+Info='Hi,                                                    \
 \	this is Curriculum Vitae and Cover Letter generator  \
 \	by Jakub Olizarowicz.                                \
 \	If you are HR employee and do not know how to        \
@@ -8,20 +8,20 @@ Info="Hi,                                                    \
 \	developer would be recommended).                     \
 \	If I can be of any further assistance please do not  \
 \	hesitate to contact me on: j.olizarowicz@gmail.com   \
-\                                                            \
+\\                                                           \
 \	Reuirements:                                         \
 \	- make (tested with GNU Make 3.81)                   \
 \	- bash (at least 3.0)                                \
 \	- awk (any awk, code used in this code is portable)  \
-\                                                            \
+\\                                                           \
 \	Usage:                                               \
 \       save as Makefile, makefile  and run make in the same \
 \	folder or run make with -f <filename> option         \
-\                                                            \
+\\                                                           \
 \	The rest of the file is the actual Makefile script.  \
 \	Thanks for your time and concideration hitherto.     \
 \                                                            \
-\\"
+\\'
 
 #Setting "magic" Pi constant for awk
 Pi=3.14
@@ -29,6 +29,7 @@ Pi=3.14
 #An Awk script that looks for rules and their descriptions and prints them
 Awkusage='BEGIN{                                                               \
 	gsub("\t","\n\t",info);                                                \
+	gsub("\\\\","\n",info);                                                \
 	print info;                                                            \
 	print "Available commands/Dostepne komendy" }                          \
 !/^[a-z]+:/{                                                                   \
@@ -96,7 +97,7 @@ sentence "Tremendous forgeter. Forgets everything in no time"
 CL="Dear Sir or Madam"                                                         \
 "Over the last few years I was bored at my work"                               \
 "I started to optimise everything, now our bulding have another backdoor       \
-because it is more optimal to enter via backdoor.                              \
+because it is more optimal to enter via backdoor."                             \
 "Willing to create more backdoors at your company"                             \
 "Yours faithfully"                                                             \
 "BOFH"
@@ -310,25 +311,300 @@ BEGIN{for(i=1;i<ARGC;i++){gsub("  *"," ",ARGV[i]);fprint(ARGV[i],62);          \
 if(length(ARGV[(i+1)] "")>0) print ""}}
 
 
+o=(
+c=)
 
+Twokfoureight=                                                                 \
+trap exit\ 0 INT                                                            EOL\
+dump_array$o$c {                                                            EOL\
+        printf "%s %s %s %s\\n" "$${array[@]}"                              EOL\
+}                                                                           EOL\
+                                                                            EOL\
+array=$o                                                                    EOL\
+0   0   0   0                                                               EOL\
+0   0   0   0                                                               EOL\
+0   0   0   0                                                               EOL\
+0   0   0   0 $c ;                                                          EOL\
+                                                                            EOL\
+print_grid $o$c {                                                           EOL\
+	_row=$$row                                                          EOL\
+	_col=$$column                                                       EOL\
+	row=0                                                               EOL\
+	column=0                                                            EOL\
+	while [[ $$row -le 3 ]] ; do                                        EOL\
+		printf "+======+======+======+======+\\n"                   EOL\
+		printf "|      |      |      |      |\\n"                   EOL\
+		while [[ $$column -le 3 ]]; do                              EOL\
+			_current="$${array[$$$o$o $$column + 4 *$$row$c$c]}"EOL\
+			[[ $$_current -eq 0 ]] && _current=""               EOL\
+			printf "| %4s " "$$_current"                        EOL\
+			unset _current                                      EOL\
+			$o$ocolumn++$c$c                                    EOL\
+		done                                                        EOL\
+		printf "|\\n"                                               EOL\
+		printf "|      |      |      |      |\\n"                   EOL\
+		$o$orow++$c$c                                               EOL\
+		column=0                                                    EOL\
+	done                                                                EOL\
+	printf "+======+======+======+======+\\n"                           EOL\
+	row=$$_row                                                          EOL\
+	column=$$_col                                                       EOL\
+}                                                                           EOL\
+                                                                            EOL\
+get_input $o$c {                                                            EOL\
+        stty -icanon                                                        EOL\
+	printf  "press up key ... "                                         EOL\
+	up="$$$odd count=1 2>/dev/null$c"                                   EOL\
+	printf  "\\npress down key ... "                                    EOL\
+	down="$$$odd count=1 2>/dev/null$c"                                 EOL\
+	printf  "\\npress left key ... "                                    EOL\
+	left="$$$odd count=1 2>/dev/null$c"                                 EOL\
+	printf  "\\npress right key ... "                                   EOL\
+	right="$$$odd count=1 2>/dev/null$c"                                EOL\
+	echo                                                                EOL\
+	stty icanon                                                         EOL\
+}                                                                           EOL\
+                                                                            EOL\
+test_input $o$c {                                                           EOL\
+	stty -icanon                                                        EOL\
+	while true; do                                                      EOL\
+		printf "press up/down/left/right key\\n"                    EOL\
+		input="$$$odd count=1  2>/dev/null$c"                       EOL\
+		case "$$input" in                                           EOL\
+			$$up$c printf "you pressed up key\\n";;             EOL\
+			$$down$c printf "you pressed down key\\n" ;;        EOL\
+			$$left$c printf "you pressed left key\\n" ;;        EOL\
+			$$right$c printf "you pressed right key\\n" ;;      EOL\
+			*$c printf "that is not your directional key\\n"    EOL\
+		esac                                                        EOL\
+		break                                                       EOL\
+	done                                                                EOL\
+	stty icanon                                                         EOL\
+}                                                                           EOL\
+                                                                            EOL\
+move_left $o$c {                                                            EOL\
+	row=0                                                               EOL\
+	while [[ $$row -le 3 ]]; do                                         EOL\
+		unset tmp_array tmp_arr_position                            EOL\
+		column=0                                                    EOL\
+                                                                            EOL\
+		while [[ $$column -le 3 ]]; do                              EOL\
+			populate_tmp_array                                  EOL\
+			$o$ocolumn++$c$c                                    EOL\
+		done                                                        EOL\
+                                                                            EOL\
+		shrink_tmp_arr                                              EOL\
+                                                                            EOL\
+		update_main_array                                           EOL\
+                                                                            EOL\
+		$o$orow++$c$c                                               EOL\
+	done                                                                EOL\
+}                                                                           EOL\
+                                                                            EOL\
+populate_tmp_array $o$c {                                                   EOL\
+	tmp_arr_position=$o"$${tmp_arr_position[@]}" "$$$o$ocolumn + 4 *       \
+	$$row $c$c"$c                                                       EOL\
+	[[ $${array[$$$o$ocolumn + 4 * $$row $c$c]} -gt 0 ]] &&             EOL\
+		tmp_array=$o"$${tmp_array[@]}"                             \EOL\
+		"$${array[$$$o$ocolumn + 4 * $$row $c$c]}"$c                EOL\
+}                                                                           EOL\
+                                                                            EOL\
+shrink_tmp_arr $o$c{                                                        EOL\
+	i=0                                                                 EOL\
+	max="$${\#tmp_array[@]}"                                            EOL\
+                                                                            EOL\
+	while [[ $$i -le $$max ]]; do                                       EOL\
+		if [[ "$${tmp_array[$$i]}" -eq                                 \
+		"$${tmp_array[$$$o$o$$i+1$c$c]}" ]] ;                       EOL\
+		then                                                        EOL\
+			tmp_array[$$i]=$$$o$o 2 * tmp_array[$$i] $c$c       EOL\
+			unset tmp_array[$$$o$o$$i+1$c$c]                    EOL\
+			$o$o i++ $c$c                                       EOL\
+		fi                                                          EOL\
+		$o$o i++ $c$c                                               EOL\
+	done                                                                EOL\
+	tmp_array=$o"$${tmp_array[@]}"$c                                    EOL\
+}                                                                           EOL\
+                                                                            EOL\
+update_main_array $o$c {                                                    EOL\
+	i=0                                                                 EOL\
+	max="$${\#tmp_array[@]}"                                            EOL\
+                                                                            EOL\
+	while [[ $$i -le 3 ]]; do                                           EOL\
+		array[$${tmp_arr_position[$$i]}]="$${tmp_array[$$i]:-0}"    EOL\
+		$o$oi++$c$c                                                 EOL\
+	done                                                                EOL\
+}                                                                           EOL\
+                                                                            EOL\
+move_up $o$c {                                                              EOL\
+                                                                            EOL\
+	column=0                                                            EOL\
+	while [[ $$column -le 3 ]]; do                                      EOL\
+		unset tmp_array tmp_arr_position                            EOL\
+		row=0                                                       EOL\
+                                                                            EOL\
+		while [[ $$row -le 3 ]]; do                                 EOL\
+			populate_tmp_array                                  EOL\
+			$o$orow++$c$c                                       EOL\
+		done                                                        EOL\
+                                                                            EOL\
+		shrink_tmp_arr                                              EOL\
+                                                                            EOL\
+		update_main_array                                           EOL\
+                                                                            EOL\
+		$o$ocolumn++$c$c                                            EOL\
+	done                                                                EOL\
+}                                                                           EOL\
+                                                                            EOL\
+move_down $o$c {                                                            EOL\
+                                                                            EOL\
+	column=0                                                            EOL\
+                                                                            EOL\
+	while [[ $$column -le 3 ]]; do                                      EOL\
+		unset tmp_array tmp_arr_position                            EOL\
+		row=3                                                       EOL\
+                                                                            EOL\
+		while [[ $$row -ge 0 ]]; do                                 EOL\
+			populate_tmp_array                                  EOL\
+			$o$orow--$c$c                                       EOL\
+		done                                                        EOL\
+                                                                            EOL\
+		shrink_tmp_arr                                              EOL\
+                                                                            EOL\
+		update_main_array                                           EOL\
+                                                                            EOL\
+		$o$ocolumn++$c$c                                            EOL\
+	done                                                                EOL\
+}                                                                           EOL\
+                                                                            EOL\
+move_right $o$c {                                                           EOL\
+	row=0                                                               EOL\
+                                                                            EOL\
+	while [[ $$row -le 3 ]]; do                                         EOL\
+		unset tmp_array tmp_arr_position                            EOL\
+		column=3                                                    EOL\
+                                                                            EOL\
+		while [[ $$column -ge 0 ]]; do                              EOL\
+			populate_tmp_array                                  EOL\
+			$o$ocolumn--$c$c                                    EOL\
+		done                                                        EOL\
+		shrink_tmp_arr                                              EOL\
+		update_main_array                                           EOL\
+		$o$orow++$c$c                                               EOL\
+	done                                                                EOL\
+}                                                                           EOL\
+random_ $o$c {                                                              EOL\
+	stty -icanon                                                        EOL\
+	rand_ff="$$$odd count=1 </dev/random 2>/dev/null$c"                 EOL\
+	stty icanon                                                         EOL\
+	return echo "$$rand_ff"                                             EOL\
+}                                                                           EOL\
+                                                                            EOL\
+add_number $o$c {                                                           EOL\
+	unset  zero_position i                                              EOL\
+	i=0                                                                 EOL\
+	while [[ $$i -lt $${\#array[@]} ]]; do                              EOL\
+	[[ array[$$i] -eq 0 ]] && \                                         EOL\
+		zero_position=$o"$${zero_position[@]}"  $$i$c               EOL\
+	$o$oi++$c$c                                                         EOL\
+	done                                                                EOL\
+	i="$$$odate +%S$c"                                                  EOL\
+	i="$${i\#0}"                                                        EOL\
+	i=$$$o$o $$i % $${\#zero_position[@]}$c$c                           EOL\
+	j=$$RANDOM                                                          EOL\
+	[[ $$j -eq 0 ]] && j=4 || j=2                                       EOL\
+                                                                            EOL\
+	array[$${zero_position[$$i]}]=$$j                                   EOL\
+}                                                                           EOL\
+                                                                            EOL\
+test_available $o$c {                                                       EOL\
+	original_array=$o"$${array[@]}"$c                                   EOL\
+	move_left                                                           EOL\
+	[[ "$${original_array[@]}" == "$${array[@]}" ]]                     EOL\
+	al=$$?                                                              EOL\
+	array=$o"$${original_array[@]}"$c                                   EOL\
+	move_right                                                          EOL\
+	[[ "$${original_array[@]}" == "$${array[@]}" ]]                     EOL\
+	ar=$$?                                                              EOL\
+	array=$o"$${original_array[@]}"$c                                   EOL\
+	move_up                                                             EOL\
+	[[ "$${original_array[@]}" == "$${array[@]}" ]]                     EOL\
+	au=$$?                                                              EOL\
+	array=$o"$${original_array[@]}"$c                                   EOL\
+	move_down                                                           EOL\
+	[[ "$${original_array[@]}" == "$${array[@]}" ]]                     EOL\
+	ad=$$?                                                              EOL\
+	array=$o"$${original_array[@]}"$c                                   EOL\
+	$o$o $$al + $$ar + $$au + $$ad $c$c || {                            EOL\
+		echo you loose                                              EOL\
+		exit 0                                                      EOL\
+	}                                                                   EOL\
+	available="Available directions: "                                  EOL\
+	$o$o $$al $c$c && available="$${available}left "                    EOL\
+	$o$o $$ar $c$c && available="$${available}right "                   EOL\
+	$o$o $$au $c$c && available="$${available}up "                      EOL\
+	$o$o $$ad $c$c && available="$${available}down"                     EOL\
+	echo $$available                                                    EOL\
+}                                                                           EOL\
+                                                                            EOL\
+get_input                                                                   EOL\
+move_left                                                                   EOL\
+add_number                                                                  EOL\
+clear                                                                       EOL\
+print_grid                                                                  EOL\
+                                                                            EOL\
+while true; do                                                              EOL\
+	stty -icanon                                                        EOL\
+	while true; do                                                      EOL\
+		original_array=$o"$${array[@]}"$c                           EOL\
+		available="press up/down/left/right key\\n"                 EOL\
+		test_available                                              EOL\
+		input="$$$odd count=1  2>/dev/null$c"                       EOL\
+		case "$$input" in                                           EOL\
+			$$up$c move_up;;                                    EOL\
+			$$down$c move_down ;;                               EOL\
+			$$left$c move_left ;;                               EOL\
+			$$right$c move_right;;                              EOL\
+			*$c printf "that iss not your directional key\\n"   EOL\
+		esac                                                        EOL\
+		[[ "$${original_array[@]}" == "$${array[@]}" ]] &&continue 2EOL\
+                                                                            EOL\
+		break                                                       EOL\
+	done                                                                EOL\
+	stty icanon                                                         EOL\
+                                                                            EOL\
+	add_number                                                          EOL\
+	clear                                                               EOL\
+	print_grid                                                          EOL\
+done
+
+Gamename=./2048_mk.sh
+Cvfile=> ./Jakub_Olizarowicz_CV.txt
+Coverfile=> ./Jakub_Olizarowicz_Cover.txt
+E=2>/dev/null
 
 default:
 # is default action, prints list of available commands
-	@awk -vinfo=${Info} ${Awkusage} ${MAKEFILE_LIST} 2>/dev/null
+	@awk -vinfo=${Info} ${Awkusage} ${MAKEFILE_LIST}  $E
 
 cv:
-# makes a CV file called "Jakub_Olizarowicz CV.txt"
-	@gawk ${Scriptawk} experience ${Experience} experience ${Experience2}  \
+# makes a CV file called "Jakub_Olizarowicz_CV.txt"
+	@awk ${Scriptawk} experience ${Experience} experience ${Experience2}   \
 		personaldata ${PersonalData} statement ${Grants} profile       \
-		${Profile} interests ${Interests} skills ${Skills}|head -n 100
+		${Profile} interests ${Interests} skills ${Skills} ${Cvfile} $E
 
 cover: 
 # makes Cover Letter file called "Jakub_Olizarowicz_Cover.txt"
-	@awk '${Scriptawk2}' ${CL}
+	@awk '${Scriptawk2}' ${CL} ${Coverfile}
 
 extras:
-	@echo extras not available on github 
-	@echo wait till i send this code during recrutation process
+# you may want to check it yourself.
+	@echo '${Twokfoureight}' | awk 'BEGIN{RS="EOL ";}index($$1,"\#")!=1{\
+		sub(" +$$","");print}' > ${Gamename} $E 2>/dev/null && \
+		echo temporary file  ${gamename} was created 
+	@echo to exit this game use SIGINT - CTRL+C 
+	@bash ${Gamename}
+	@rm ${Gamename}  || echo Could not remove ${Gamename}
 
 #
 #The MIT License (MIT)
