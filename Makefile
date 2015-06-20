@@ -1,26 +1,26 @@
 
-Info='Hi,                                                    \
-\	this is Curriculum Vitae and Cover Letter generator  \
-\	by Jakub Olizarowicz.                                \
-\	If you are HR employee and do not know how to        \
-\	approach this application you may wish to ask your   \
-\	IT department for assistance (linux user or          \
-\	developer would be recommended).                     \
-\	If I can be of any further assistance please do not  \
-\	hesitate to contact me on: j.olizarowicz@gmail.com   \
-\\                                                           \
-\	Reuirements:                                         \
-\	- make (tested with GNU Make 3.81)                   \
-\	- bash (at least 3.0)                                \
-\	- awk (any awk, code used in this code is portable)  \
-\\                                                           \
-\	Usage:                                               \
-\       save as Makefile, makefile  and run make in the same \
-\	folder or run make with -f <filename> option         \
-\\                                                           \
-\	The rest of the file is the actual Makefile script.  \
-\	Thanks for your time and concideration hitherto.     \
-\                                                            \
+Info='Hi,                                                        \
+\	this is Curriculum Vitae and Cover Letter generator      \
+\	by Jakub Olizarowicz.                                    \
+\	If you are HR employee and do not know how to approach   \
+\	this application you may wish to ask your IT department  \
+\	for assistance (linux user or developer would be         \
+\	recommended).                                            \
+\	If I can be of any further assistance please do not      \
+\	hesitate to contact me on: j.olizarowicz@gmail.com       \
+\\                                                               \
+\	Reuirements:                                             \
+\	- make (tested with GNU Make 3.81)                       \
+\	- bash (at least 3.0)                                    \
+\	- awk (any awk, code used in this code is portable)      \
+\\                                                               \
+\	Usage:                                                   \
+\	save as Makefile, makefile  and run make in the same     \
+\	folder or run make with -f <filename> option             \
+\\                                                               \
+\	The rest of the file is the actual Makefile script.      \
+\	Thanks for your time and concideration hitherto.         \
+\                                                                \
 \\'
 
 #Setting "magic" Pi constant for awk
@@ -43,64 +43,96 @@ Awkusage='BEGIN{                                                               \
 }                                                                              \
 ${Pi}' 
 
-PersonalData=name GivenName                                                    \
-surname FamilyName                                                             \
-addr "street 123"                                                              \
-city "POST-CODE city"                                                          \
-phone "+00 123456789"
+PersonalData=name Jakub                                                        \
+surname Olizarowicz                                                            \
+addr "61-285 Poznan"                                                           \
+city "62-200 Gniezno"                                                          \
+phone "+48 698083558"
 
 
-Experience=start 1337                                                          \
-end 2013                                                                       \
-company	freelancer.com                                                         \
-city	127.0.0.1                                                              \
-jobname	"it guy"                                                               \
+ArtSoft=start "AUGUST 2011"                                                    \
+end "JUNE 2012"                                                                \
+company	"Art-soft Project S.A."                                                \
+city	Poznan, Poland                                                         \
+jobname	"IT PERSON (AS CONTRACTOR FOR BZWBK S.A.)"                             \
                                                                                \
-adjectives_in "diligent efficient"                                             \
-adjectives_at effective                                                        \
+adjectives_in "accurate profficient competent"                                 \
+adjectives_at efficient                                                        \
 adjectives_with up_to_date                                                     \
                                                                                \
-sentence "writing code"                                                        \
-sentence "bugging code"                                                        \
-sentence "debugging code"
+sentence "maintaining and supporting Microsoft based internal systems including\
+and SQL Server"                                                                \
+sentence "liaising with the software developers to ensure problems are reported\
+and progressed to completion"
 
-Experience2=start 2013                                                         \
-company	freelauncher.com                                                       \
-city	::1                                                                    \
-jobname	"nother gear in the machine called corporation"                        \
+BZWBK=start "JULY 2012"                                                        \
+company	"BANK ZACHODNI WBK S.A."                                               \
+city	"Poznan, Poland"                                                       \
+jobname	"senior it person"                                                     \
                                                                                \
-adjectives_in "diligent efficient"                                             \
-adjectives_at effective                                                        \
+adjectives_in "effective diligent proficient competent experienced succinct    \
+thorough Successful Precise"                                                   \
+adjectives_at efficient                                                        \
 adjectives_with up_to_date                                                     \
                                                                                \
-sentence "managing code"                                                       \
-sentence "analysys of code"                                                    \
-sentence "deploying code"
+sentence "24/7 system maintenance, working \"out of hours\" to process         \
+infrastructure and code changes"                                               \
+sentence "ensuring that platforms are kept up to date, consistent and stable   \
+and the integrity of the code is maintained throughout the lifecycle"          \
+sentence "providing technical support in test environment by implementing new  \
+functionalities"                                                               \
+sentence "completing code rollout onto production environments for development \
+services"                                                                      \
+sentence "providing recommendations when handling security issues"             \
+sentence "systems recovery by scheduling and performing backups"               \
+sentence "handling failover of a Database"                                     \
+sentence "monitoring the effectiveness and efficiency of applied solution"     \
+sentence "optimization of already existing solutions"                          \
+sentence  "maintaining and implementing controls relating to information       \
+security and credit/debit card data in line with Group Policy, IT Governance   \
+and PCI-DSS regulations"                                                       \
+sentence "current and emerging technological advancements"
 
-Profile="Very reliable freelancer looking for job opportunity as your company  \
-	hopefully you are not corporation and you pay very well for me lieks   \
-	moneyz"
+Profile="An ambitious and motivated system administrator. Able to analyse,     \
+diagnose, design, plan, execute and evaluate work. Eagerly accepting new       \
+challenges, experienced in working within a dynamic, fast paced environment.   \
+Solution – oriented, experienced in building relationship with clients and     \
+other team members, committed to providing guidance and support. Effective     \
+when working with minimal supervision on technical issues and diligent in      \
+problem solving. Would like to combine academic achievements and work          \
+experience in a challenging role."
 
-Grants="I hereby grants noone to process any of my vital and personal data     \
-\	required under none recruitment campaigns and you proabbly want to ask \
-\       me via given email if you get this application from github and not     \
-\	from me personally.                                                    \
-\	                                                                       \
-\\"
+Interests= sentence "Enjoy swimming and water canoeing"                        \
+sentence "Passionate in reproduction of medieval weapon and taking part in     \
+medieval knights tournaments"
 
-Interests= sentence "Enjoy reading assamby"                                    \
-sentence "Passionate in reinventing wheel"
+Skills=sentence "Excellent working knowledge of AiX, Linux, Windows, MySQL,    \
+Informix Dynamic Server, Oracle RDBMS, Microsoft SQL Server, Nginx, Apache,    \
+IIS, ksh93, ksh88, POSIX sh, awk"                                              \
+sentence "Team player, well presented and projects a professional manner when  \
+communicating with colleagues"                                                 \
+sentence "Conscientious, able to use initiative and to focus"                  \
+sentence "Results orientated for quality time and cost"                        \
+sentence "Good communicator, including written and verbal communication, and a \
+good listener, with the ability to show empathy take control and extract all   \
+necessary information"                                                         \
+sentence "Poses excellent trouble-shooting skills"                             \
+sentence "Holder of full, clean EU driving licence cat A and B (7 years)"      
 
-Skills=sentence "Excellent working knowledge of mouse"                         \
-sentence "Tremendous forgeter. Forgets everything in no time"
 
 CL="Dear Sir or Madam"                                                         \
-"Over the last few years I was bored at my work"                               \
-"I started to optimise everything, now our bulding have another backdoor       \
-because it is more optimal to enter via backdoor."                             \
-"Willing to create more backdoors at your company"                             \
+"Over the last few years I was succesfully administrating many production      \
+servers."                                                                      \
+"During my carieer I was sovling loads of puzzles like *James Pond* in his     \
+underwater world."                                                             \
+"Getting rid of _bugs_ and other insects like *superfrog* was my daily routine \
+when others still tried to cross the street finding themself run over by the   \
+trucks."                                                                       \
+"In my life I have created my own bestiary which allows me to master many      \
+_daemon_ on every UNIX system known to a human race. I am profficient in       \
+_killing_  _zombies_ aswell."                                                  \
 "Yours faithfully"                                                             \
-"BOFH"
+"Jakub Olizarowicz"
 
 Scriptawk=' function farray(  arr){                                            \
 	for(element in arr){                                                   \
@@ -116,6 +148,7 @@ function getdata(  what){                                                      \
 }                                                                              \
                                                                                \
 function fprint(  string,  cols, ident, line,  i,  sa){                        \
+	originalline=line;                                                     \
 	split(string,sa," ");                                                  \
                                                                                \
 	for(i=1;length(sa[i] "");i++){                                         \
@@ -139,8 +172,10 @@ function fprint(  string,  cols, ident, line,  i,  sa){                        \
 	}                                                                      \
                                                                                \
 	for (i in sa){                                                         \
-		if(! length(line" "sa[i]) > cols || length(line "") )          \
-			print(line,sa[i]);                                     \
+		if(! length(line" "sa[i]) > cols || length(line "") ){         \
+			line=line" "sa[i];                                     \
+			print(line);                                           \
+		}                                                              \
 		else                                                           \
 			print(line"\n"sa[i]);                                  \
 	}                                                                      \
@@ -149,6 +184,11 @@ function fprint(  string,  cols, ident, line,  i,  sa){                        \
 function makesentence(  text,  point){                                         \
 	return toupper(substr(text,1,1)) substr(text,2);                       \
 }                                                                              \
+function cprint(  text,  cols, tmp, tmp2){ \
+	tmp=int((cols-length(text ""))/2); \
+	while (tmp--)printf("%s"," "); \
+	print text;\
+} \
                                                                                \
 function lvlup(  n,  a){                                                       \
 	if(level==1) print "\n\n"toupper(sect);                                \
@@ -157,9 +197,9 @@ function lvlup(  n,  a){                                                       \
                                                                                \
 from=getdata("start") 	;                                                      \
 	print "";                                                              \
-	fprint(from" - "to" "getdata("company"),62);                           \
-	fprint(toupper(getdata("jobname")),62);                                \
-                                                                               \
+	cprint(from" - "to"    "getdata("company"),$L);                        \
+	cprint(toupper(getdata("jobname")),$L);                                \
+	print "";                                                              \
 	adj=getdata("adjectives_in");                                          \
 	split(adj,in_a," ");                                                   \
 	for (n in in_a)                                                        \
@@ -182,7 +222,6 @@ from=getdata("start") 	;                                                      \
 	for (j in with_a)                                                      \
 		adj_a[++a]=with_a[j];                                          \
 	if(maxa+0==0) maxa=a;                                                  \
-	for(rr=1;rr<10;rr++)print rand();                                      \
 	seed="date +%N";                                                       \
 	seed|getline d;                                                        \
 	close(seed);                                                           \
@@ -192,19 +231,19 @@ from=getdata("start") 	;                                                      \
 	split(sentences,sen_a,"|");                                            \
 	for (k in sen_a) {                                                     \
 		longarg=makesentence(adj_a[((++a)%(maxa))+1]) " " sen_a[k];    \
-		fprint( longarg,62, "* ");                                     \
+		fprint( longarg,$L,"  ","*");                                  \
 	}                                                                      \
 }                                                                              \
                                                                                \
 function pprofile(){                                                           \
 	print "\n"toupper(sect)"\n";                                           \
-	fprint(profile,62," ");                                                \
+	fprint(profile,$L,""," ");                                                \
 }                                                                              \
                                                                                \
 function pstatement(){                                                         \
 	print "\n\n";                                                          \
 	gsub(/[\\ ]/," ",statement);                                           \
-	fprint(statement,62);                                                  \
+	fprint(statement,$L);                                                  \
 }                                                                              \
                                                                                \
 function pd(){                                                                 \
@@ -224,7 +263,7 @@ function plist(  header,  phrase,  point,  ident,  sa,  i){                    \
 	split(getdata(phrase),sa,"|");                                         \
 	for(i in sa)                                                           \
 		if(length(sa[i]))                                              \
-			fprint(makesentence(sa[i]),62,point,ident);            \
+			fprint(makesentence(sa[i]),$L,point,ident);            \
 }                                                                              \
                                                                                \
 BEGIN{                                                                         \
@@ -307,7 +346,7 @@ function fprint(  string,  cols, ident, line,  i,  sa){                        \
 	}                                                                      \
 }                                                                              \
                                                                                \
-BEGIN{for(i=1;i<ARGC;i++){gsub("  *"," ",ARGV[i]);fprint(ARGV[i],62);          \
+BEGIN{for(i=1;i<ARGC;i++){gsub("  *"," ",ARGV[i]);fprint(ARGV[i],$L);          \
 if(length(ARGV[(i+1)] "")>0) print ""}}
 
 
@@ -536,7 +575,7 @@ test_available $o$c {                                                       EOL\
 	ad=$$?                                                              EOL\
 	array=$o"$${original_array[@]}"$c                                   EOL\
 	$o$o $$al + $$ar + $$au + $$ad $c$c || {                            EOL\
-		echo you loose                                              EOL\
+		echo Game over \:\$c                                        EOL\
 		exit 0                                                      EOL\
 	}                                                                   EOL\
 	available="Available directions: "                                  EOL\
@@ -582,6 +621,7 @@ Gamename=./2048_mk.sh
 Cvfile=> ./Jakub_Olizarowicz_CV.txt
 Coverfile=> ./Jakub_Olizarowicz_Cover.txt
 E=2>/dev/null
+L=66
 
 default:
 # is default action, prints list of available commands
@@ -589,13 +629,28 @@ default:
 
 cv:
 # makes a CV file called "Jakub_Olizarowicz_CV.txt"
-	@awk ${Scriptawk} experience ${Experience} experience ${Experience2}   \
+	@awk ${Scriptawk} experience ${BZWBK} experience ${ArtSoft}   \
 		personaldata ${PersonalData} statement ${Grants} profile       \
 		${Profile} interests ${Interests} skills ${Skills} ${Cvfile} $E
 
 cover: 
 # makes Cover Letter file called "Jakub_Olizarowicz_Cover.txt"
 	@awk '${Scriptawk2}' ${CL} ${Coverfile}
+
+all: cover cv
+# makes both CV and Cover Letter files
+
+info:
+# prints some additional info
+	@echo INFO:
+	@echo  - make L=\<width\> will change default length of line in        \
+		generated documents."\n" Default value of L is 66 characters as\
+		suggested in RFC 3676.
+
+	@echo - to show results on screen unset Cvfile or Coverfile            \
+		respectively
+	@echo eg. \"make L=\$$\(tput cols\) Cvfile=  cv\" will show cv in      \
+		terminal using terminals width
 
 extras:
 # you may want to check it yourself.
@@ -604,7 +659,7 @@ extras:
 		echo temporary file  ${gamename} was created 
 	@echo to exit this game use SIGINT - CTRL+C 
 	@bash ${Gamename}
-	@rm ${Gamename}  || echo Could not remove ${Gamename}
+	#@rm ${Gamename}  || echo Could not remove ${Gamename}
 
 #
 #The MIT License (MIT)
@@ -629,3 +684,10 @@ extras:
 #OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 #SOFTWARE.
 #
+
+Grants="I hereby consent to the processing of my vital and personal data in so \
+far as this is required under the current as well as future recruitment        \
+campaigns conducted by your_company Sp. z o.o., with headquarters in A City,   \
+The street, in accordance with the Act of August 29, 1997, on the              \
+Protection of Personal Information (JoL no. 133, item 883).\
+\\"
